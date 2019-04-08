@@ -7,13 +7,13 @@
 //
 
 import Foundation
+import MapKit
 
 class SunTimesService {
     
-    func fetchSunTimes() {
+    func fetchSunTimes(location: CLLocation) {
         
-        // TODO after the lat= put in \(usersLat) and the after lng= put in \(usersLong)
-        let url_str = "https://api.sunrise-sunset.org/json?lat=45&lng=-93"
+        let url_str = "https://api.sunrise-sunset.org/json?lat=\(location.coordinate.latitude)&lng=\(location.coordinate.longitude)"
         let url = URL(string: url_str)
         
         let session = URLSession.shared
