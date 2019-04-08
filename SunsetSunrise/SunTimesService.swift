@@ -12,6 +12,7 @@ class SunTimesService {
     
     func fetchSunTimes() {
         
+        // TODO after the lat= put in \(usersLat) and the after lng= put in \(usersLong)
         let url_str = "https://api.sunrise-sunset.org/json?lat=45&lng=-93"
         let url = URL(string: url_str)
         

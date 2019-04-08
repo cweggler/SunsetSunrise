@@ -16,6 +16,7 @@
 		46CA37DA225A54CD00644F33 /* SunsetSunriseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CA37D9225A54CD00644F33 /* SunsetSunriseUITests.swift */; };
 		46CA37E8225A586000644F33 /* SunTimes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CA37E7225A586000644F33 /* SunTimes.swift */; };
 		46CA37EA225A596200644F33 /* SunTimesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CA37E9225A596200644F33 /* SunTimesService.swift */; };
+		46CA37ED225AF2D200644F33 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46CA37EC225AF2D200644F33 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		46CA37DB225A54CD00644F33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46CA37E7225A586000644F33 /* SunTimes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunTimes.swift; sourceTree = "<group>"; };
 		46CA37E9225A596200644F33 /* SunTimesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunTimesService.swift; sourceTree = "<group>"; };
+		46CA37EC225AF2D200644F33 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46CA37ED225AF2D200644F33 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +88,7 @@
 				46CA37CD225A54CD00644F33 /* SunsetSunriseTests */,
 				46CA37D8225A54CD00644F33 /* SunsetSunriseUITests */,
 				46CA37B7225A54C600644F33 /* Products */,
+				46CA37EB225AF2D200644F33 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,6 +133,14 @@
 				46CA37DB225A54CD00644F33 /* Info.plist */,
 			);
 			path = SunsetSunriseUITests;
+			sourceTree = "<group>";
+		};
+		46CA37EB225AF2D200644F33 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46CA37EC225AF2D200644F33 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
