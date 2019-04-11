@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class ViewController: UIViewController, CLLocationManagerDelegate, SunTimesDelegate {
 
     @IBOutlet var sunriseLabel: UILabel!
     @IBOutlet var sunsetLabel: UILabel!
@@ -24,13 +24,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager = CLLocationManager()
         locationManager!.delegate = self
         locationManager!.requestWhenInUseAuthorization()
+        
+        sunTimesService.sunTimesDelegate = self
+        
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse {
             // get the user's location
-            currentLocation = locationManager!.location
             locationManager!.requestLocation()
+            currentLocation = locationManager!.location
             
         } else {
             let alert = UIAlertController(title: "Can't display location", message: "Please grant permission in settings", preferredStyle: .alert)
@@ -48,14 +51,31 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         if currentLocation != nil {
+           
             sunTimesService.fetchSunTimes(location: currentLocation)
             //TODO Update the labels
-//            sunriseLabel.text = SunTimes.
+            //sunriseLabel.text = sunTimesService.results.sunrise
 //            sunsetLabel.text = SunTimes.sunset
         }
         else {
             print("Location is nil")
         }
     }
+    
+    func sunTimesFetched(sunTimes: SunTimes) {
+        DispatchQueue.main.async {
+            let sunriseText = "\(sunTimes.sunrise)"
+            self.sunriseLabel.text = sunriseText
+            
+            let sunsetText = "\(sunTimes.sunset)"
+            self.sunsetLabel.text = sunsetText
+        }
+    }
+    
+    func sunTimesFetchError(because sunTimesError: SunTimesError) {
+        print(sunTimesError) 
+    }
+    
+
 }
 

@@ -13,8 +13,8 @@ struct SunTimes: Decodable {
     let sunset: String
     
     enum CodingKeys: String, CodingKey {
-        case sunrise = "sunrise"
-        case sunset = "sunset"
+        case sunrise
+        case sunset 
     }
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		464F9E87225CB41800264576 /* SunTimesDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464F9E86225CB41800264576 /* SunTimesDelegate.swift */; };
 		46CA37BA225A54C600644F33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CA37B9225A54C600644F33 /* AppDelegate.swift */; };
 		46CA37BC225A54C600644F33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CA37BB225A54C600644F33 /* ViewController.swift */; };
 		46CA37BF225A54C600644F33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46CA37BD225A54C600644F33 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		464F9E86225CB41800264576 /* SunTimesDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunTimesDelegate.swift; sourceTree = "<group>"; };
 		46CA37B6225A54C600644F33 /* SunsetSunrise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SunsetSunrise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46CA37B9225A54C600644F33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46CA37BB225A54C600644F33 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			children = (
 				46CA37B9225A54C600644F33 /* AppDelegate.swift */,
 				46CA37BB225A54C600644F33 /* ViewController.swift */,
+				464F9E86225CB41800264576 /* SunTimesDelegate.swift */,
 				46CA37E7225A586000644F33 /* SunTimes.swift */,
 				46CA37E9225A596200644F33 /* SunTimesService.swift */,
 				46CA37BD225A54C600644F33 /* Main.storyboard */,
@@ -274,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				464F9E87225CB41800264576 /* SunTimesDelegate.swift in Sources */,
 				46CA37BC225A54C600644F33 /* ViewController.swift in Sources */,
 				46CA37EA225A596200644F33 /* SunTimesService.swift in Sources */,
 				46CA37E8225A586000644F33 /* SunTimes.swift in Sources */,
