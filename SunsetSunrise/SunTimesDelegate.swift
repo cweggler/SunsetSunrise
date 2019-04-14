@@ -12,6 +12,6 @@ import Foundation
 // SunTimes (or errors from fetching SunTimes) must implement
 
 protocol SunTimesDelegate {
-    func sunTimesFetched(sunTimes: SunTimes)
+    func sunTimesFetched(sunTimes: Results)
     func sunTimesFetchError(because sunTimesError: SunTimesError)
 }

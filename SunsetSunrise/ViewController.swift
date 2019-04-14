@@ -24,9 +24,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SunTimesDeleg
         locationManager = CLLocationManager()
         locationManager!.delegate = self
         locationManager!.requestWhenInUseAuthorization()
-        
-        sunTimesService.sunTimesDelegate = self
-        
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -51,23 +48,20 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SunTimesDeleg
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         if currentLocation != nil {
-           
+            sunTimesService.sunTimesDelegate = self
             sunTimesService.fetchSunTimes(location: currentLocation)
-            //TODO Update the labels
-            //sunriseLabel.text = sunTimesService.results.sunrise
-//            sunsetLabel.text = SunTimes.sunset
         }
         else {
             print("Location is nil")
         }
     }
     
-    func sunTimesFetched(sunTimes: SunTimes) {
-        DispatchQueue.main.async {
-            let sunriseText = "\(sunTimes.sunrise)"
+    func sunTimesFetched(sunTimes: Results) {
+       DispatchQueue.main.async {
+            let sunriseText = "\(sunTimes.results.sunrise)"
             self.sunriseLabel.text = sunriseText
-            
-            let sunsetText = "\(sunTimes.sunset)"
+
+            let sunsetText = "\(sunTimes.results.sunset)"
             self.sunsetLabel.text = sunsetText
         }
     }

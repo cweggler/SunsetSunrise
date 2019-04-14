@@ -32,7 +32,8 @@ class SunTimesService {
             
             if let sunTimesData = data {
                 let decoder = JSONDecoder()
-                if let results = try? decoder.decode(SunTimes.self, from: sunTimesData) {
+                if let results = try? decoder.decode(Results.self, from: sunTimesData) {
+                    print(results)
                     delegate.sunTimesFetched(sunTimes: results)
                 }
                 else{
